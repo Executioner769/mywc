@@ -157,7 +157,7 @@ int main(int argc, char** argv) {
     // open file in read mode
     file_d = fopen(argv[idx], "r");
     if (file_d == NULL) {
-      fprintf(stderr, "[ERROR] Cannot open file: %s\n", argv[idx]);
+      fprintf(stderr, "%s: cannot open file: %s\n", argv[0], argv[idx]);
       // exit(EXIT_FAILURE);
     } else {
       fcnt = getCount(file_d);
